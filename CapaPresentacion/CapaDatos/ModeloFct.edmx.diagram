@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5903523250684cb299e158bcb59a3582" Name="Diagram1">
+        <EntityTypeShape EntityType="BdFCTsModel.Alumno" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BdFCTsModel.Ciclo" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BdFCTsModel.Empresa" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BdFCTsModel.FCT" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BdFCTsModel.OfertasFCT" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BdFCTsModel.Profe" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="BdFCTsModel.sysdiagram" Width="1.5" PointX="6.75" PointY="6.625" IsExpanded="true" />
+        <AssociationConnector Association="BdFCTsModel.FK_Alumnos_Ciclos" ManuallyRouted="false" />
+        <AssociationConnector Association="BdFCTsModel.FK_FCTs_Alumnos" ManuallyRouted="false" />
+        <AssociationConnector Association="BdFCTsModel.FK_OfertasFCT_Ciclos" ManuallyRouted="false" />
+        <AssociationConnector Association="BdFCTsModel.FK_FCTs_Empresas" ManuallyRouted="false" />
+        <AssociationConnector Association="BdFCTsModel.FK_OfertasFCT_Empresas" ManuallyRouted="false" />
+        <AssociationConnector Association="BdFCTsModel.FK_FCTs_Profes" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
