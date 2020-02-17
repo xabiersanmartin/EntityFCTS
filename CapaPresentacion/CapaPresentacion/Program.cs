@@ -9,7 +9,7 @@ namespace CapaPresentacion
 {
     static class Program
     {
-        public static Acceso gestor = new Acceso();
+         public static Acceso gestor = new Acceso();
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>

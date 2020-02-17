@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmConsultarCiclo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarCiclo.Designer.cs">
+      <DependentUpon>frmConsultarCiclo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConsultarCiclo.resx">
+      <DependentUpon>frmConsultarCiclo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +92,10 @@
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
       <Project>{1BE6B6C4-B1CD-4CCD-BA6C-76F3E161EDB7}</Project>
       <Name>CapaNegocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{EA150129-4882-42E2-B36E-67C161C373BC}</Project>
+      <Name>Entidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

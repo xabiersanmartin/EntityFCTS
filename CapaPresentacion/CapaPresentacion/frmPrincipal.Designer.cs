@@ -28,20 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnConsultaCiclo = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Form1
+            // btnConsultaCiclo
+            // 
+            this.btnConsultaCiclo.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultaCiclo.Location = new System.Drawing.Point(55, 157);
+            this.btnConsultaCiclo.Name = "btnConsultaCiclo";
+            this.btnConsultaCiclo.Size = new System.Drawing.Size(176, 57);
+            this.btnConsultaCiclo.TabIndex = 0;
+            this.btnConsultaCiclo.Text = "&Consultas Por Ciclo";
+            this.btnConsultaCiclo.UseVisualStyleBackColor = true;
+            this.btnConsultaCiclo.Click += new System.EventHandler(this.btnConsultaCiclo_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(351, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(199, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "FCTS EMPRESA";
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Red;
+            this.btnSalir.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
+            this.btnSalir.Location = new System.Drawing.Point(797, 429);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(104, 44);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 497);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnConsultaCiclo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frmPrincipal";
+            this.Text = "Formulario Principal";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnConsultaCiclo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 

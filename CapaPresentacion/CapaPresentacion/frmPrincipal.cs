@@ -16,5 +16,16 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnConsultaCiclo_Click(object sender, EventArgs e)
+        {
+            frmConsultarCiclo frm = new frmConsultarCiclo();
+            frm.Show();
+        }
     }
 }
