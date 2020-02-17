@@ -12,8 +12,23 @@ namespace Entidades
     using System;
     using System.Collections.Generic;
     
-    public partial class Alumno
+    public partial class Alumno : IEquatable<Alumno>
     {
+        public Alumno()
+        {
+        }
+
+        public Alumno(int nMatricula, string nombre, string telefono, bool aprobado, string idCiclo, Ciclo ciclo, FCT fCT)
+        {
+            NMatricula = nMatricula;
+            Nombre = nombre;
+            Telefono = telefono;
+            Aprobado = aprobado;
+            IdCiclo = idCiclo;
+            Ciclo = ciclo;
+            FCT = fCT;
+        }
+
         public int NMatricula { get; set; }
         public string Nombre { get; set; }
         public string Telefono { get; set; }
@@ -22,5 +37,21 @@ namespace Entidades
     
         public virtual Ciclo Ciclo { get; set; }
         public virtual FCT FCT { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as Alumno);
+        }
+
+        public bool Equals(Alumno other)
+        {
+            return other != null &&
+                   NMatricula == other.NMatricula;
+        }
+
+        public override int GetHashCode()
+        {
+            return 1687765875 + NMatricula.GetHashCode();
+        }
     }
 }

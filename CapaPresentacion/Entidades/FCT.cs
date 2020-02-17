@@ -12,8 +12,23 @@ namespace Entidades
     using System;
     using System.Collections.Generic;
     
-    public partial class FCT
+    public partial class FCT : IEquatable<FCT>
     {
+        public FCT()
+        {
+        }
+
+        public FCT(int nMatricula, int idEmpresa, string tutorInsti, string tutorEmpresa, Alumno alumno, Empresa empresa, Profe profe)
+        {
+            NMatricula = nMatricula;
+            IdEmpresa = idEmpresa;
+            TutorInsti = tutorInsti;
+            TutorEmpresa = tutorEmpresa;
+            Alumno = alumno;
+            Empresa = empresa;
+            Profe = profe;
+        }
+
         public int NMatricula { get; set; }
         public int IdEmpresa { get; set; }
         public string TutorInsti { get; set; }
@@ -22,5 +37,21 @@ namespace Entidades
         public virtual Alumno Alumno { get; set; }
         public virtual Empresa Empresa { get; set; }
         public virtual Profe Profe { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as FCT);
+        }
+
+        public bool Equals(FCT other)
+        {
+            return other != null &&
+                   NMatricula == other.NMatricula;
+        }
+
+        public override int GetHashCode()
+        {
+            return 1687765875 + NMatricula.GetHashCode();
+        }
     }
 }

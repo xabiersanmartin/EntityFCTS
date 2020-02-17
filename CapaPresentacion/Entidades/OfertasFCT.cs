@@ -12,13 +12,46 @@ namespace Entidades
     using System;
     using System.Collections.Generic;
     
-    public partial class OfertasFCT
+    public partial class OfertasFCT : IEquatable<OfertasFCT>
     {
+        public OfertasFCT()
+        {
+        }
+
+        public OfertasFCT(int idEmpresa, string idCiclo, int cantidad, Ciclo ciclo, Empresa empresa)
+        {
+            IdEmpresa = idEmpresa;
+            IdCiclo = idCiclo;
+            Cantidad = cantidad;
+            Ciclo = ciclo;
+            Empresa = empresa;
+        }
+
         public int IdEmpresa { get; set; }
         public string IdCiclo { get; set; }
         public int Cantidad { get; set; }
     
         public virtual Ciclo Ciclo { get; set; }
         public virtual Empresa Empresa { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as OfertasFCT);
+        }
+
+        public bool Equals(OfertasFCT other)
+        {
+            return other != null &&
+                   IdEmpresa == other.IdEmpresa &&
+                   IdCiclo.ToLower() == other.IdCiclo.ToLower();
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = -1252559737;
+            hashCode = hashCode * -1521134295 + IdEmpresa.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(IdCiclo);
+            return hashCode;
+        }
     }
 }
