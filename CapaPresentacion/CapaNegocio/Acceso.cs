@@ -14,9 +14,9 @@ namespace CapaNegocio
         Gestor nuevoAcceso = new Gestor(out string mensaje);
 
         //Llamamos al metodo de DevolverCiclos.
-        public List<Ciclo> DevolverCiclos(out string mensaje)
+        public List<Ciclo> DevolverCiclos()
         {
-            return nuevoAcceso.DevolverCiclos(out mensaje);
+            return nuevoAcceso.DevolverCiclos();
         }
     }
 }

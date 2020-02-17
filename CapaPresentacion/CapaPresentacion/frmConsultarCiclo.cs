@@ -14,7 +14,6 @@ namespace CapaPresentacion
 {
     public partial class frmConsultarCiclo : Form
     {
-        static string mensaje;
 
         public frmConsultarCiclo()
         {
@@ -24,12 +23,8 @@ namespace CapaPresentacion
         private void frmConsultarCiclo_Load(object sender, EventArgs e)
         {
 
-            List<Ciclo> ListaCiclos = Program.gestor.DevolverCiclos(out mensaje);
-            if (mensaje == "No hay ciclos")
-            {
-                MessageBox.Show("No se han podido encontrar los ciclos, contacta con el administrador");
-                return;
-            }
+            List<Ciclo> ListaCiclos = Program.gestor.DevolverCiclos();
+
             cboCiclos.Items.Clear();
             cboCiclos.Items.AddRange(ListaCiclos.ToArray());
             cboCiclos.DisplayMember = "Nombre";

@@ -25,15 +25,8 @@ namespace CapaDatos
             }
         }
 
-        public List<Ciclo> DevolverCiclos (out string mensaje)
+        public List<Ciclo> DevolverCiclos ()
         {
-            mensaje = "";
-
-            if (BdFCTsEntities.Ciclos == null)
-            {
-                mensaje = "No hay ciclos";
-                return null;
-            }
             return BdFCTsEntities.Ciclos.ToList();
         }
 
