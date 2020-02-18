@@ -167,10 +167,10 @@ namespace CapaDatos
                 if (cambios == 0) return "Error al añadir";
                 return "";
             }
-            catch (Exception)
-            {
 
-                throw;
+            catch (Exception ex)
+            {
+               return ex.Message;
             }
             
 
