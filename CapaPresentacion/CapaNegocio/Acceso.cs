@@ -18,10 +18,17 @@ namespace CapaNegocio
         {
             return nuevoAcceso.DevolverCiclos();
         }
+
+        public List<Profe> DevolverProfes()
+        {
+            return nuevoAcceso.DevolverProfes();
+        }
+
         public int DevolverAlumnosAsignadosPorCiclo(string idCiclo, out string mensaje)
         {
             return nuevoAcceso.AlumnosAsignadosPorCiclo(idCiclo, out mensaje);
         }
+
         public List<Alumno> DevolverAlumnosPorCiclo(string idCiclo, out string mensaje)
         {
             return nuevoAcceso.AlumnosPorCiclo(idCiclo, out mensaje);
