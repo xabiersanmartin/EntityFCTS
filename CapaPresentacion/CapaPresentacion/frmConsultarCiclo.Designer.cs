@@ -63,6 +63,7 @@
             this.cboCiclos.Name = "cboCiclos";
             this.cboCiclos.Size = new System.Drawing.Size(121, 21);
             this.cboCiclos.TabIndex = 1;
+            this.cboCiclos.SelectedIndexChanged += new System.EventHandler(this.cboCiclos_SelectedIndexChanged);
             // 
             // label1
             // 

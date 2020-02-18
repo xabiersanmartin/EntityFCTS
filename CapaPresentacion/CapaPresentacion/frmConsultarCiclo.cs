@@ -14,6 +14,7 @@ namespace CapaPresentacion
 {
     public partial class frmConsultarCiclo : Form
     {
+        public string mensaje = "";
 
         public frmConsultarCiclo()
         {
@@ -27,7 +28,21 @@ namespace CapaPresentacion
 
             cboCiclos.Items.Clear();
             cboCiclos.Items.AddRange(ListaCiclos.ToArray());
-            cboCiclos.DisplayMember = "Nombre";
+            cboCiclos.DisplayMember = "id";
+        }
+
+        private void cboCiclos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Ciclo newCiclo = new Ciclo();
+            newCiclo = cboCiclos.SelectedItem as Ciclo;
+
+            //Quiero poner el nombre del ciclo cogiendolo a traves del combobox, ni puta idea de que hace esto.
+            lblNombreCIclo.Text = cboCiclos.DisplayMember = "Nombre";
+
+            List<Alumno> cicloAlumno = Program.gestor.DevolverAlumnosPorCiclo(newCiclo.Id, out mensaje);
+
+            dgvCiclos.DataSource = (from alum in cicloAlumno
+                                    select new { alum.Nombre, alum.Telefono, alum.Aprobado }).ToList();
         }
     }
 }

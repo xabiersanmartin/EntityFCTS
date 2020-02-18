@@ -21,6 +21,10 @@ namespace Entidades
             this.OfertasFCTs = new HashSet<OfertasFCT>();
         }
 
+        public Ciclo(string id)
+        {
+            Id = id;
+        }
 
         public Ciclo(string id, string nombre, string tipo, ICollection<Alumno> alumnos, ICollection<OfertasFCT> ofertasFCTs)
         {

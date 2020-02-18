@@ -30,5 +30,23 @@ namespace CapaDatos
             return BdFCTsEntities.Ciclos.ToList();
         }
 
+        public List<Alumno> AlumnosPorCiclo(string idCiclo, out string mensaje)
+        {
+            mensaje = "";
+            Ciclo cicloBuscar = new Ciclo(idCiclo);
+
+            Ciclo ciclo = BdFCTsEntities.Ciclos.ToList().Where(com => com.Equals(cicloBuscar)).SingleOrDefault();
+
+            if (ciclo == null)
+            {
+                mensaje =  "No existe el ciclo ";
+                return new List<Alumno>();
+            }
+
+            List<Alumno> alumnosDelCiclo = ciclo.Alumnos.ToList();
+            return alumnosDelCiclo;
+        }
+
+
     }
 }
