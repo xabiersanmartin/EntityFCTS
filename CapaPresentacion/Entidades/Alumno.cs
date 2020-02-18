@@ -29,12 +29,18 @@ namespace Entidades
             FCT = fCT;
         }
 
+        public Alumno(string nombre, Empresa empresa)
+        {
+            Nombre = nombre;
+            Empresa = empresa;
+        }
+
         public int NMatricula { get; set; }
         public string Nombre { get; set; }
         public string Telefono { get; set; }
         public bool Aprobado { get; set; }
         public string IdCiclo { get; set; }
-    
+        public Empresa Empresa { get; set; }
         public virtual Ciclo Ciclo { get; set; }
         public virtual FCT FCT { get; set; }
 

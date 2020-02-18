@@ -39,7 +39,7 @@ namespace CapaPresentacion
             //Quiero poner el nombre del ciclo cogiendolo a traves del combobox, ni puta idea de que hace esto.
             lblNombreCIclo.Text = newCiclo.Nombre;
             lblAlumnosCiclo.Text = newCiclo.Alumnos.Count().ToString();
-
+            lblAlumnosAsignados.Text = Program.gestor.DevolverAlumnosAsignadosPorCiclo(newCiclo.Id, out mensaje).ToString();
             List<Alumno> cicloAlumno = Program.gestor.DevolverAlumnosPorCiclo(newCiclo.Id, out mensaje);
 
             dgvCiclos.DataSource = (from alum in cicloAlumno
