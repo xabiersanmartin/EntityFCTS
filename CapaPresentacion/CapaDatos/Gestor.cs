@@ -66,8 +66,17 @@ namespace CapaDatos
             List<Empresa> empresaPorciclo = (from emp in ofertasCiclo
                                              where emp.IdCiclo == ciclo.Id
                                              select emp.Empresa).OrderBy(o => o).ToList();
+
+            if (empresaPorciclo == null)
+            {
+                mensaje = "No hay empresas candidatas con ese Ciclo";
+                return null;
+            }
+
             return empresaPorciclo;
         }
+
+
 
     }
 }

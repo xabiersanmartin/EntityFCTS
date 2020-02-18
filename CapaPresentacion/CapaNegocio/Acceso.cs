@@ -23,5 +23,10 @@ namespace CapaNegocio
         {
             return nuevoAcceso.AlumnosPorCiclo(idCicLo, out mensaje);
         }
+
+        public List<Empresa> DevolverEmpresasPorCiclo(string idCiclo, out string mensaje)
+        {
+            return nuevoAcceso.EmpresasPorCiclo(idCiclo, out mensaje);
+        }
     }
 }
