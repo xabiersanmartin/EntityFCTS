@@ -89,7 +89,7 @@ namespace CapaDatos
             List<Alumno> listaAlum = ciclo.Alumnos.ToList();
             List<Alumno> listaAlumnoAsignadoEmpresa = (from alum in listaAlum
                                                        where listaFcts.Contains(alum.FCT)
-                                                       select new Alumno(alum.Nombre, alum.Empresa)).ToList();
+                                                       select new Alumno(alum.Nombre, alum.FCT.Empresa.Nombre)).ToList();
            
             if (listaAlumnoAsignadoEmpresa == null)
             {

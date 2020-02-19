@@ -50,8 +50,10 @@ namespace CapaPresentacion
 
             dgvEmpresasParaCiclo.DataSource = (from empresa in cicloEmpresa
                                                select new { empresa.Nombre, empresa.TelefonoContacto, empresa.OfertasFCTs.Count }).ToList();
-            
-            List<Alumno> alumnosAsignados = Program.gestor.
+
+            List<Alumno> alumnosAsignados = Program.gestor.DevolverListaAlumnosAsignadosPorCiclo(newCiclo.Id, out mensaje);
+            dgvAlumosConEmpresa.DataSource = (from alumno in alumnosAsignados
+                                              select new { alumno.Nombre, alumno.NombreEmpresa }).ToList();
         }
 
     }
