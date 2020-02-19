@@ -48,7 +48,8 @@ namespace CapaDatos
                 return new List<Alumno>();
             }
 
-            List<Alumno> alumnosDelCiclo = ciclo.Alumnos.ToList();
+            List<Alumno> alumnosDelCiclo = ciclo.Alumnos.OrderBy(o => o.Aprobado==false).ToList();
+            
             return alumnosDelCiclo;
         }
         public int AlumnosAsignadosPorCiclo(string idCiclo, out string mensaje)
