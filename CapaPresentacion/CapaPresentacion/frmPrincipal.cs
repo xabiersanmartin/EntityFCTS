@@ -33,5 +33,11 @@ namespace CapaPresentacion
             frmEmpresasAlumno frmEmp = new frmEmpresasAlumno();
             frmEmp.Show();
         }
+
+        private void btnEliminarAlumnoEmpresa_Click(object sender, EventArgs e)
+        {
+            frmEliminarAlumnoDeEmpresa frmEliminar = new frmEliminarAlumnoDeEmpresa();
+            frmEliminar.Show();
+        }
     }
 }

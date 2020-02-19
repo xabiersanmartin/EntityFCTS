@@ -187,7 +187,7 @@
             this.Controls.Add(this.cboCiclos);
             this.Controls.Add(this.lblCiclos);
             this.Name = "frmConsultarCiclo";
-            this.Text = "frmConsultarCiclo";
+            this.Text = "Consultar Ciclo";
             this.Load += new System.EventHandler(this.frmConsultarCiclo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCiclos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresasParaCiclo)).EndInit();

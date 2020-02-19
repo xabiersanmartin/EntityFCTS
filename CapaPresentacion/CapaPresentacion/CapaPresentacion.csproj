@@ -67,6 +67,12 @@
     <Compile Include="frmConsultarCiclo.Designer.cs">
       <DependentUpon>frmConsultarCiclo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEliminarAlumnoDeEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarAlumnoDeEmpresa.Designer.cs">
+      <DependentUpon>frmEliminarAlumnoDeEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEmpresasAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmConsultarCiclo.resx">
       <DependentUpon>frmConsultarCiclo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarAlumnoDeEmpresa.resx">
+      <DependentUpon>frmEliminarAlumnoDeEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmpresasAlumno.resx">
       <DependentUpon>frmEmpresasAlumno.cs</DependentUpon>

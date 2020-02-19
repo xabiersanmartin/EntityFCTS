@@ -89,6 +89,7 @@
             this.btnEliminarAlumnoEmpresa.TabIndex = 4;
             this.btnEliminarAlumnoEmpresa.Text = "&Eliminar Alumno de Empresa";
             this.btnEliminarAlumnoEmpresa.UseVisualStyleBackColor = true;
+            this.btnEliminarAlumnoEmpresa.Click += new System.EventHandler(this.btnEliminarAlumnoEmpresa_Click);
             // 
             // frmPrincipal
             // 

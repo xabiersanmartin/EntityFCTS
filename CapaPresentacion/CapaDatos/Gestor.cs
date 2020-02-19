@@ -150,6 +150,8 @@ namespace CapaDatos
                 return "El nombre del tutor de la empresa no puede estar vacio";
             }
 
+            
+
             //Creamos una nueva FCT donde vamos a añadirlo
             FCT anadirFct = new FCT(anadirAlumno.NMatricula, anadirEmpresa.Id, anadirProfe.Nombre, tutorEmpresa, anadirAlumno, anadirEmpresa, anadirProfe);
 
