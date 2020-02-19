@@ -114,9 +114,10 @@ namespace CapaDatos
 
             List<OfertasFCT> ofertasCiclo = ciclo.OfertasFCTs.ToList();
 
+            //Necesitamos ordenarlo alfabeticamente
             List<Empresa> empresaPorciclo = (from emp in ofertasCiclo
                                              where emp.IdCiclo == ciclo.Id
-                                             select emp.Empresa).OrderBy(o => o).ToList();
+                                             select emp.Empresa).ToList();
 
             if (empresaPorciclo == null)
             {
