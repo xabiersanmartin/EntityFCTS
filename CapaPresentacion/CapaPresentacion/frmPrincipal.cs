@@ -26,18 +26,21 @@ namespace CapaPresentacion
         {
             frmConsultarCiclo frm = new frmConsultarCiclo();
             frm.Show();
+            
         }
 
         private void btnAlumnoEmpresa_Click(object sender, EventArgs e)
         {
             frmEmpresasAlumno frmEmp = new frmEmpresasAlumno();
             frmEmp.Show();
+            
         }
 
         private void btnEliminarAlumnoEmpresa_Click(object sender, EventArgs e)
         {
             frmEliminarAlumnoDeEmpresa frmEliminar = new frmEliminarAlumnoDeEmpresa();
             frmEliminar.Show();
+            
         }
     }
 }

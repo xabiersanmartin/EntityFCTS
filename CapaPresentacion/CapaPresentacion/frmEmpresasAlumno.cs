@@ -23,6 +23,7 @@ namespace CapaPresentacion
 
         private void frmEmpresasAlumno_Load(object sender, EventArgs e)
         {
+
             List<Ciclo> ListaCiclos = Program.gestor.DevolverCiclos();
 
             cboCiclo.Items.Clear();
@@ -79,6 +80,15 @@ namespace CapaPresentacion
         private void btnAsignar_Click(object sender, EventArgs e)
         {
             MessageBox.Show(Program.gestor.AnadirAlumnoEmpresa((Empresa)cboDevolverEmpresaCiclo.SelectedItem,(Alumno)cboAlumnosCiclo.SelectedItem ,(Profe)cboTutorInstituto.SelectedItem , txtTutorEmpresa.Text));
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Seguro que quieres salir?", "Salir", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

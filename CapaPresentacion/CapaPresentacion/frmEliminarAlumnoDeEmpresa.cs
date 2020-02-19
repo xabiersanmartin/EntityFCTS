@@ -48,8 +48,6 @@ namespace CapaPresentacion
             if (result == DialogResult.Yes)
             {
                 this.Close();
-                frmPrincipal frmPrincipal = new frmPrincipal();
-                frmPrincipal.Show();
             }
 
         }
