@@ -38,5 +38,10 @@ namespace CapaNegocio
         {
             return nuevoAcceso.EmpresasPorCiclo(idCiclo, out mensaje);
         }
+
+        public string AnadirAlumnoEmpresa(Empresa anadirEmpresa, Alumno anadirAlumno, Profe anadirProfe, string tutorEmpresa)
+        {
+            return nuevoAcceso.AñadirAlumnoEmpresa(anadirEmpresa, anadirAlumno, anadirProfe, tutorEmpresa);
+        }
     }
 }

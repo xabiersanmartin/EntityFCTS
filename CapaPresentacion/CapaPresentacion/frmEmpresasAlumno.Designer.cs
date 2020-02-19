@@ -122,18 +122,21 @@
             // 
             // btnAsignar
             // 
+            this.btnAsignar.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsignar.Location = new System.Drawing.Point(121, 343);
             this.btnAsignar.Name = "btnAsignar";
-            this.btnAsignar.Size = new System.Drawing.Size(134, 42);
+            this.btnAsignar.Size = new System.Drawing.Size(143, 59);
             this.btnAsignar.TabIndex = 10;
             this.btnAsignar.Text = "&Asignar empresa";
             this.btnAsignar.UseVisualStyleBackColor = true;
+            this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
             // 
             // btnVolver
             // 
+            this.btnVolver.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.Location = new System.Drawing.Point(351, 343);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(134, 42);
+            this.btnVolver.Size = new System.Drawing.Size(143, 59);
             this.btnVolver.TabIndex = 11;
             this.btnVolver.Text = "&Volver";
             this.btnVolver.UseVisualStyleBackColor = true;

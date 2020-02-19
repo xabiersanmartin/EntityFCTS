@@ -43,6 +43,7 @@
             this.cboCiclos.Name = "cboCiclos";
             this.cboCiclos.Size = new System.Drawing.Size(172, 21);
             this.cboCiclos.TabIndex = 0;
+            this.cboCiclos.SelectedIndexChanged += new System.EventHandler(this.cboCiclos_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -79,6 +80,7 @@
             this.btnRetirar.TabIndex = 4;
             this.btnRetirar.Text = "&Retirar Empresa";
             this.btnRetirar.UseVisualStyleBackColor = true;
+            this.btnRetirar.Click += new System.EventHandler(this.btnRetirar_Click);
             // 
             // btnVolver
             // 
@@ -89,6 +91,7 @@
             this.btnVolver.TabIndex = 5;
             this.btnVolver.Text = "&Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // frmEliminarAlumnoDeEmpresa
             // 
@@ -105,6 +108,7 @@
             this.Name = "frmEliminarAlumnoDeEmpresa";
             this.Text = "Eliminar Alumno De Empresa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmEliminarAlumnoDeEmpresa_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

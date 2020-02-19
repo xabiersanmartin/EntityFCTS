@@ -48,14 +48,19 @@ namespace CapaPresentacion
             cboDevolverEmpresaCiclo.Items.AddRange(empresasCiclo.ToArray());
             cboDevolverEmpresaCiclo.DisplayMember = "Nombre";
 
+            List<Profe> listaProfesores = Program.gestor.DevolverProfes();
+            cboTutorInstituto.Items.Clear();
+            cboTutorInstituto.Items.AddRange(listaProfesores.ToArray());
+            cboTutorInstituto.DisplayMember = "Nombre";
+
 
         }
 
         private void txtTutorEmpresa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsDigit(e.KeyChar)))
+            if (Char.IsDigit(e.KeyChar))
                 {
-                    e.Handled = false;
+                    e.Handled = true;
                 }
 
             else
@@ -69,6 +74,11 @@ namespace CapaPresentacion
                     {
                         e.Handled = false;
                     }
+        }
+
+        private void btnAsignar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Program.gestor.AnadirAlumnoEmpresa((Empresa)cboDevolverEmpresaCiclo.SelectedItem,(Alumno)cboAlumnosCiclo.SelectedItem ,(Profe)cboTutorInstituto.SelectedItem , txtTutorEmpresa.Text));
         }
     }
 }
