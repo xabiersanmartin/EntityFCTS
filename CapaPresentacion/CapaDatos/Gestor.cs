@@ -62,7 +62,7 @@ namespace CapaDatos
                 return 0;
 
             }
-            int numAsignados = BdFCTsEntities.FCTs.ToList().Where(alumn => cicloBuscar.Alumnos.Contains(alumn.Alumno)).Count();
+            int numAsignados = BdFCTsEntities.FCTs.ToList().Where(alumn => ciclo.Alumnos.Contains(alumn.Alumno)).Count();
             if (numAsignados != 0)
             {
                 mensaje = "Este ciclo no tiene alumnos asignados";
@@ -117,7 +117,7 @@ namespace CapaDatos
             //Necesitamos ordenarlo alfabeticamente
             List<Empresa> empresaPorciclo = (from emp in ofertasCiclo
                                              where emp.IdCiclo == ciclo.Id
-                                             select emp.Empresa).ToList();
+                                             select emp.Empresa).OrderBy(o => o.Nombre).ToList();
 
             if (empresaPorciclo == null)
             {
