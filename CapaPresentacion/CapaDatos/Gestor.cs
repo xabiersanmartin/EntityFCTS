@@ -62,8 +62,10 @@ namespace CapaDatos
                 return 0;
 
             }
-            int numAsignados = BdFCTsEntities.FCTs.ToList().Where(alumn => ciclo.Alumnos.Contains(alumn.Alumno)).Count();
-            if (numAsignados != 0)
+            List<FCT> listaFcts = BdFCTsEntities.FCTs.ToList();
+            List<Alumno> listaAlum = ciclo.Alumnos.ToList();
+            int numAsignados = listaAlum.FindAll(alum => listaFcts.Contains(alum.FCT)).Count();
+            if (numAsignados == 0)
             {
                 mensaje = "Este ciclo no tiene alumnos asignados";
                 return 0;
