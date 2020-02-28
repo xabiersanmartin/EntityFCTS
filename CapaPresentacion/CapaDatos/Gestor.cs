@@ -233,7 +233,12 @@ namespace CapaDatos
 
             return "";
         }
-
+        public Empresa DevolverEmpresa(int nMatricula)
+        {
+            FCT fct = BdFCTsEntities.FCTs.Find(nMatricula);
+            Empresa empresaBuscar = BdFCTsEntities.Empresas.Find(fct.IdEmpresa);
+            return empresaBuscar;
+        }
 
         public string EliminarEmpresaAlumno(int nMatricula)
         {

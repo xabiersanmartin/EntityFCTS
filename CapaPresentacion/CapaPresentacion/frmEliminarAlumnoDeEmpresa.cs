@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using CapaDatos;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,7 +57,7 @@ namespace CapaPresentacion
 
         private void btnRetirar_Click(object sender, EventArgs e)
         {
-
+            Alumno alumnoBorrar = cboAlumnosCiclo.SelectedItem as Alumno;
             if (cboCiclos.SelectedItem == null)
             {
                 MessageBox.Show("Debes selccionar primero un ciclo para cargar a los alumnos");
@@ -65,20 +66,21 @@ namespace CapaPresentacion
 
             string mensaje = "";
 
-            mensaje = (Program.gestor.SeleccionarEmpresaAlumno((Alumno)cboAlumnosCiclo.SelectedItem));
+            mensaje = (Program.gestor.SeleccionarEmpresaAlumno(alumnoBorrar));
 
             if (mensaje != "")
             {
                 MessageBox.Show(mensaje);
                 return;
             }
-
-            Alumno alumnoEliminar = (Alumno)cboAlumnosCiclo.SelectedItem;
+            Empresa empresaAlumno = Program.gestor.DevolverEmpresa(alumnoBorrar.NMatricula);
+            Alumno alumnoEliminar = new Alumno(alumnoBorrar.Nombre,empresaAlumno.Nombre);
 
             DialogResult result = MessageBox.Show("Seguro que quieres eliminar " + alumnoEliminar.Nombre + " que esta asignado a " + alumnoEliminar.NombreEmpresa + " ?", "ELIMINAR", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                MessageBox.Show(Program.gestor.EliminarEmpresaAlumno(alumnoEliminar.NMatricula));
+                string respuesta = Program.gestor.EliminarEmpresaAlumno(alumnoBorrar.NMatricula);
+                MessageBox.Show(respuesta);
             }
         }
     }

@@ -56,5 +56,9 @@ namespace CapaNegocio
         {
             return nuevoAcceso.EliminarEmpresaAlumno(nMatricula);
         }
+        public Empresa DevolverEmpresa(int nMatricula)
+        {
+            return nuevoAcceso.DevolverEmpresa(nMatricula);
+        }
     }
 }
