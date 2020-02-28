@@ -83,9 +83,11 @@ namespace CapaPresentacion
 
         private void btnAsignar_Click(object sender, EventArgs e)
         {
+            string mensaje = "";
 
-            MessageBox.Show(Program.gestor.AnadirAlumnoEmpresa((Ciclo)cboCiclo.SelectedItem,(Empresa)cboDevolverEmpresaCiclo.SelectedItem,(Alumno)cboAlumnosCiclo.SelectedItem ,(Profe)cboTutorInstituto.SelectedItem , txtTutorEmpresa.Text));
-    
+            mensaje = Program.gestor.AnadirAlumnoEmpresa((Ciclo)cboCiclo.SelectedItem,(Empresa)cboDevolverEmpresaCiclo.SelectedItem,(Alumno)cboAlumnosCiclo.SelectedItem ,(Profe)cboTutorInstituto.SelectedItem , txtTutorEmpresa.Text);
+
+            MessageBox.Show(mensaje);
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

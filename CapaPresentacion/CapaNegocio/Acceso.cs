@@ -13,7 +13,6 @@ namespace CapaNegocio
         //Declaramos el acceso a la capa de Datos
         Gestor nuevoAcceso = new Gestor(out string mensaje);
 
-        //Llamamos al metodo de DevolverCiclos.
         public List<Ciclo> DevolverCiclos()
         {
             return nuevoAcceso.DevolverCiclos();

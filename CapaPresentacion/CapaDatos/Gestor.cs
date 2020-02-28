@@ -169,21 +169,18 @@ namespace CapaDatos
                 return $"El alumno {anadirAlumno.Nombre} ya tiene asignada una empresa";
             }
 
-            //ESTA MAL PORQUE HAY QUE REVISAR QUE LA EMPRESA NO PIDA PARA CICLO NO EN GENERAL!
             OfertasFCT Ofertafct = BdFCTsEntities.OfertasFCTs.Find(anadirEmpresa.Id, anadirCiclo.Id);
             if (Ofertafct == null)
             {
                 return $"La {anadirEmpresa.Nombre} no ha solicitado alumnos para el ciclo {anadirCiclo.Nombre}";
             }
 
-            //ESTO MIRA SI EL ALUMNO PERTENCE AL CICLO?
 
             if (!(anadirCiclo.Alumnos.Contains(anadirAlumno)))
             {
                 return $"Este {anadirAlumno.Nombre} no esta en este ciclo";
             }
 
-            //CONTROL ERROR EMPRESA YA TIENEN LA CANTIDAD DE ALUMNOS PEDIDA.
             if (anadirEmpresa.FCTs.Count == Ofertafct.Cantidad)
             {
                 return $"La empresa {anadirEmpresa.Nombre} ya tiene asignados el/los {Ofertafct.Cantidad} alumnos/as pedidos";
@@ -246,10 +243,8 @@ namespace CapaDatos
 
             try
             {
-               // Alumno alumnoBuscar = BdFCTsEntities.Alumnos.Find(nMatricula);
-               // FCT eliminarFct = new FCT(alumnoBuscar);
+
                 FCT fct = BdFCTsEntities.FCTs.Find(nMatricula);
-                //SI HACEMOS ESTO PODEMOS HACER ALGO EN CASCADA PARA QUE BORRE TODA LA FCT? SINO SE BORRARA SOLO EL ALUMNO // ENCIMA PETA
                 BdFCTsEntities.FCTs.Remove(fct);
 
                 //Control de error por si no se a podido añadir
