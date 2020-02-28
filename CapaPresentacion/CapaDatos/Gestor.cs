@@ -161,31 +161,32 @@ namespace CapaDatos
 
             if (anadirAlumno.Aprobado == false)
             {
-                return "El alumno no ha aprobado no puede hacer FCT";
+                return $"El alumno {anadirAlumno.Nombre} no ha aprobado no puede hacer FCT";
             }
 
             if (anadirAlumno.FCT != null)
             {
-                return "El alumno ya tiene asignada una empresa";
+                return $"El alumno {anadirAlumno.Nombre} ya tiene asignada una empresa";
             }
 
             //ESTA MAL PORQUE HAY QUE REVISAR QUE LA EMPRESA NO PIDA PARA CICLO NO EN GENERAL!
-            if (anadirEmpresa.OfertasFCTs == null)
+            OfertasFCT Ofertafct = BdFCTsEntities.OfertasFCTs.Find(anadirEmpresa.Id, anadirCiclo.Id);
+            if (Ofertafct == null)
             {
-                return "La empresa no ha solicitado alumnos para FCT";
+                return $"La {anadirEmpresa.Nombre} no ha solicitado alumnos para el ciclo {anadirCiclo.Nombre}";
             }
 
             //ESTO MIRA SI EL ALUMNO PERTENCE AL CICLO?
 
             if (!(anadirCiclo.Alumnos.Contains(anadirAlumno)))
             {
-                return "Este alumno no esta en este ciclo";
+                return $"Este {anadirAlumno.Nombre} no esta en este ciclo";
             }
 
             //CONTROL ERROR EMPRESA YA TIENEN LA CANTIDAD DE ALUMNOS PEDIDA.
-            if (true)
+            if (anadirEmpresa.FCTs.Count == Ofertafct.Cantidad)
             {
-
+                return $"La empresa {anadirEmpresa.Nombre} ya tiene asignados el/los {Ofertafct.Cantidad} alumnos/as pedidos";
             }
 
             //Creamos una nueva FCT donde vamos a añadirlo
