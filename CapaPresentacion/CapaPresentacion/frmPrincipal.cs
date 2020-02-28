@@ -27,6 +27,7 @@ namespace CapaPresentacion
             frmConsultarCiclo frm = new frmConsultarCiclo();
             frm.Show();
             
+            
         }
 
         private void btnAlumnoEmpresa_Click(object sender, EventArgs e)
@@ -34,6 +35,7 @@ namespace CapaPresentacion
             frmEmpresasAlumno frmEmp = new frmEmpresasAlumno();
             frmEmp.Show();
             
+
         }
 
         private void btnEliminarAlumnoEmpresa_Click(object sender, EventArgs e)
@@ -41,6 +43,11 @@ namespace CapaPresentacion
             frmEliminarAlumnoDeEmpresa frmEliminar = new frmEliminarAlumnoDeEmpresa();
             frmEliminar.Show();
             
+        }
+
+        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           
         }
     }
 }

@@ -106,6 +106,7 @@
             this.MinimizeBox = false;
             this.Name = "frmPrincipal";
             this.Text = "Formulario Principal";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -79,7 +79,9 @@ namespace CapaPresentacion
 
         private void btnAsignar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Program.gestor.AnadirAlumnoEmpresa((Empresa)cboDevolverEmpresaCiclo.SelectedItem,(Alumno)cboAlumnosCiclo.SelectedItem ,(Profe)cboTutorInstituto.SelectedItem , txtTutorEmpresa.Text));
+
+            MessageBox.Show(Program.gestor.AnadirAlumnoEmpresa((Ciclo)cboCiclo.SelectedItem,(Empresa)cboDevolverEmpresaCiclo.SelectedItem,(Alumno)cboAlumnosCiclo.SelectedItem ,(Profe)cboTutorInstituto.SelectedItem , txtTutorEmpresa.Text));
+    
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -89,6 +91,11 @@ namespace CapaPresentacion
             {
                 this.Close();
             }
+        }
+
+        private void frmEmpresasAlumno_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }

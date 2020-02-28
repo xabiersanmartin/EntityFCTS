@@ -54,10 +54,29 @@ namespace CapaPresentacion
 
         private void btnRetirar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Seguro que quieres eliminar un alumno que esta asignado a una empresa?", "ELIMINAR", MessageBoxButtons.YesNo);
+
+            if (cboCiclos.SelectedItem == null)
+            {
+                MessageBox.Show("Debes selccionar primero un ciclo para cargar a los alumnos");
+                return;
+            }
+
+            string mensaje = "";
+
+            mensaje = (Program.gestor.SeleccionarEmpresaAlumno((Alumno)cboAlumnosCiclo.SelectedItem));
+
+            if (mensaje != "")
+            {
+                MessageBox.Show(mensaje);
+                return;
+            }
+
+            Alumno alumnoEliminar = (Alumno)cboAlumnosCiclo.SelectedItem;
+
+            DialogResult result = MessageBox.Show("Seguro que quieres eliminar " + alumnoEliminar.Nombre + " que esta asignado a " + alumnoEliminar.NombreEmpresa + " ?", "ELIMINAR", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-               
+                MessageBox.Show(Program.gestor.EliminarEmpresaAlumno((Alumno)cboAlumnosCiclo.SelectedItem));
             }
         }
     }

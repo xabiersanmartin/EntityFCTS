@@ -186,8 +186,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboCiclos);
             this.Controls.Add(this.lblCiclos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmConsultarCiclo";
             this.Text = "Consultar Ciclo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmConsultarCiclo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCiclos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresasParaCiclo)).EndInit();

@@ -18,6 +18,11 @@ namespace Entidades
         {
         }
 
+        public FCT(Alumno alumno)
+        {
+            Alumno = alumno;
+        }
+
         public FCT(int nMatricula, int idEmpresa, string tutorInsti, string tutorEmpresa, Alumno alumno, Empresa empresa, Profe profe)
         {
             NMatricula = nMatricula;

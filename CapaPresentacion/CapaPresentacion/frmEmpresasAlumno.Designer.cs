@@ -171,6 +171,7 @@
             this.Name = "frmEmpresasAlumno";
             this.Text = "Añadir Alumnos a Empresa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEmpresasAlumno_FormClosing);
             this.Load += new System.EventHandler(this.frmEmpresasAlumno_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
