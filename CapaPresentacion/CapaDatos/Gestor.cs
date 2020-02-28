@@ -176,9 +176,8 @@ namespace CapaDatos
             }
 
             //ESTO MIRA SI EL ALUMNO PERTENCE AL CICLO?
-            Ciclo mirarCiclo = BdFCTsEntities.Ciclos.Find(anadirAlumno.NMatricula);
 
-            if (mirarCiclo == null)
+            if (!(anadirCiclo.Alumnos.Contains(anadirAlumno)))
             {
                 return "Este alumno no esta en este ciclo";
             }
