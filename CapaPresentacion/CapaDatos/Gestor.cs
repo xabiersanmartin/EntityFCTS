@@ -133,7 +133,9 @@ namespace CapaDatos
 
 
         public string AñadirAlumnoEmpresa(Ciclo anadirCiclo, Empresa anadirEmpresa, Alumno anadirAlumno, Profe anadirProfe, string tutorEmpresa)
-        {
+        {// No tiene sentido que traiga los objetos, solo los identificadores, ya que es en la colecciones existentes donde vamos a hacer las modificaciones
+
+            // Con los id debía buscar los correspondientes, el ciclo, ver si tenía esa empresa, si tenía ese alumno o alumna, si el alumno estaba aprobado, si ....
             if (anadirCiclo == null)
             {
                 return "Debes seleccionar un ciclo";
@@ -181,7 +183,7 @@ namespace CapaDatos
                 return $"Este {anadirAlumno.Nombre} no esta en este ciclo";
             }
 
-            if (anadirEmpresa.FCTs.Count == Ofertafct.Cantidad)
+            if (anadirEmpresa.FCTs.Count == Ofertafct.Cantidad)  // No controla que las FCTs solicitadas sean justo de ese ciclo
             {
                 return $"La empresa {anadirEmpresa.Nombre} ya tiene asignados el/los {Ofertafct.Cantidad} alumnos/as pedidos";
             }
@@ -231,7 +233,7 @@ namespace CapaDatos
 
             return "";
         }
-        public Empresa DevolverEmpresa(int nMatricula)
+        public Empresa DevolverEmpresa(int nMatricula) // todo Debía hacer aquí los controles
         {
             FCT fct = BdFCTsEntities.FCTs.Find(nMatricula);
             Empresa empresaBuscar = BdFCTsEntities.Empresas.Find(fct.IdEmpresa);
