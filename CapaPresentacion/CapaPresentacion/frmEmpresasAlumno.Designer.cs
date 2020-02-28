@@ -40,12 +40,13 @@
             this.btnAsignar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.txtTutorEmpresa = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 60);
+            this.label1.Location = new System.Drawing.Point(156, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 0;
@@ -54,7 +55,7 @@
             // cboCiclo
             // 
             this.cboCiclo.FormattingEnabled = true;
-            this.cboCiclo.Location = new System.Drawing.Point(102, 60);
+            this.cboCiclo.Location = new System.Drawing.Point(211, 160);
             this.cboCiclo.Name = "cboCiclo";
             this.cboCiclo.Size = new System.Drawing.Size(121, 21);
             this.cboCiclo.TabIndex = 1;
@@ -63,7 +64,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(349, 60);
+            this.label2.Location = new System.Drawing.Point(458, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 13);
             this.label2.TabIndex = 2;
@@ -72,7 +73,7 @@
             // cboAlumnosCiclo
             // 
             this.cboAlumnosCiclo.FormattingEnabled = true;
-            this.cboAlumnosCiclo.Location = new System.Drawing.Point(485, 57);
+            this.cboAlumnosCiclo.Location = new System.Drawing.Point(594, 157);
             this.cboAlumnosCiclo.Name = "cboAlumnosCiclo";
             this.cboAlumnosCiclo.Size = new System.Drawing.Size(121, 21);
             this.cboAlumnosCiclo.TabIndex = 3;
@@ -80,7 +81,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 143);
+            this.label3.Location = new System.Drawing.Point(156, 243);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(256, 13);
             this.label3.TabIndex = 4;
@@ -89,7 +90,7 @@
             // cboDevolverEmpresaCiclo
             // 
             this.cboDevolverEmpresaCiclo.FormattingEnabled = true;
-            this.cboDevolverEmpresaCiclo.Location = new System.Drawing.Point(352, 143);
+            this.cboDevolverEmpresaCiclo.Location = new System.Drawing.Point(461, 243);
             this.cboDevolverEmpresaCiclo.Name = "cboDevolverEmpresaCiclo";
             this.cboDevolverEmpresaCiclo.Size = new System.Drawing.Size(254, 21);
             this.cboDevolverEmpresaCiclo.TabIndex = 5;
@@ -97,7 +98,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 220);
+            this.label4.Location = new System.Drawing.Point(156, 320);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 13);
             this.label4.TabIndex = 6;
@@ -106,7 +107,7 @@
             // cboTutorInstituto
             // 
             this.cboTutorInstituto.FormattingEnabled = true;
-            this.cboTutorInstituto.Location = new System.Drawing.Point(169, 220);
+            this.cboTutorInstituto.Location = new System.Drawing.Point(278, 320);
             this.cboTutorInstituto.Name = "cboTutorInstituto";
             this.cboTutorInstituto.Size = new System.Drawing.Size(134, 21);
             this.cboTutorInstituto.TabIndex = 7;
@@ -114,7 +115,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(348, 220);
+            this.label5.Location = new System.Drawing.Point(457, 320);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 13);
             this.label5.TabIndex = 8;
@@ -123,7 +124,7 @@
             // btnAsignar
             // 
             this.btnAsignar.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsignar.Location = new System.Drawing.Point(121, 343);
+            this.btnAsignar.Location = new System.Drawing.Point(230, 443);
             this.btnAsignar.Name = "btnAsignar";
             this.btnAsignar.Size = new System.Drawing.Size(143, 59);
             this.btnAsignar.TabIndex = 10;
@@ -134,7 +135,7 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(351, 343);
+            this.btnVolver.Location = new System.Drawing.Point(460, 443);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(143, 59);
             this.btnVolver.TabIndex = 11;
@@ -144,17 +145,28 @@
             // 
             // txtTutorEmpresa
             // 
-            this.txtTutorEmpresa.Location = new System.Drawing.Point(453, 220);
+            this.txtTutorEmpresa.Location = new System.Drawing.Point(562, 320);
             this.txtTutorEmpresa.Name = "txtTutorEmpresa";
             this.txtTutorEmpresa.Size = new System.Drawing.Size(153, 20);
             this.txtTutorEmpresa.TabIndex = 12;
             this.txtTutorEmpresa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTutorEmpresa_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(271, 49);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(332, 26);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "AÑADIR ALUMNO A EMPRESA";
             // 
             // frmEmpresasAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(902, 538);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTutorEmpresa);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnAsignar);
@@ -192,5 +204,6 @@
         private System.Windows.Forms.Button btnAsignar;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.TextBox txtTutorEmpresa;
+        private System.Windows.Forms.Label label6;
     }
 }

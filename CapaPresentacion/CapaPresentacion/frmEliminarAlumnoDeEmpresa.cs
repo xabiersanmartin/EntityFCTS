@@ -32,6 +32,8 @@ namespace CapaPresentacion
 
         private void cboCiclos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cboAlumnosCiclo.Text =  "";
+
             Ciclo newCiclo = new Ciclo();
             newCiclo = cboCiclos.SelectedItem as Ciclo;
 

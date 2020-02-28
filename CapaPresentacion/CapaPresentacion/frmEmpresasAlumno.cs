@@ -33,6 +33,10 @@ namespace CapaPresentacion
 
         private void cboCiclo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Dejamos los comboBox blancos para que quede claro, que se han reiniciado.
+            cboAlumnosCiclo.Text = "";
+            cboDevolverEmpresaCiclo.Text = "";
+
             //Creamos un nuevo ciclo, para añadir los valores del combobox a el y podemos enviar los datos a la Capa de Datos.
             Ciclo newCiclo = new Ciclo();
             newCiclo = cboCiclo.SelectedItem as Ciclo;
