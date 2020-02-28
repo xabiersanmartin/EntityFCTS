@@ -78,7 +78,7 @@ namespace CapaPresentacion
             DialogResult result = MessageBox.Show("Seguro que quieres eliminar " + alumnoEliminar.Nombre + " que esta asignado a " + alumnoEliminar.NombreEmpresa + " ?", "ELIMINAR", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                MessageBox.Show(Program.gestor.EliminarEmpresaAlumno((Alumno)cboAlumnosCiclo.SelectedItem));
+                MessageBox.Show(Program.gestor.EliminarEmpresaAlumno(alumnoEliminar.NMatricula));
             }
         }
     }

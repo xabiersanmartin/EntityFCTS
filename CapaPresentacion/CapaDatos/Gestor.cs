@@ -235,15 +235,16 @@ namespace CapaDatos
         }
 
 
-        public string EliminarEmpresaAlumno(Alumno eliminarAlumno)
+        public string EliminarEmpresaAlumno(int nMatricula)
         {
 
             try
             {
-                FCT eliminarFct = new FCT(eliminarAlumno);
-
+               // Alumno alumnoBuscar = BdFCTsEntities.Alumnos.Find(nMatricula);
+               // FCT eliminarFct = new FCT(alumnoBuscar);
+                FCT fct = BdFCTsEntities.FCTs.Find(nMatricula);
                 //SI HACEMOS ESTO PODEMOS HACER ALGO EN CASCADA PARA QUE BORRE TODA LA FCT? SINO SE BORRARA SOLO EL ALUMNO // ENCIMA PETA
-                BdFCTsEntities.FCTs.Remove(eliminarFct);
+                BdFCTsEntities.FCTs.Remove(fct);
 
                 //Control de error por si no se a podido añadir
                 int cambios = BdFCTsEntities.SaveChanges();

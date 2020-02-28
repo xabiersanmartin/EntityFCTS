@@ -52,9 +52,9 @@ namespace CapaNegocio
             return nuevoAcceso.SeleccionarEmpresaAlumno(seleccionarAlumno);
         }
 
-        public string EliminarEmpresaAlumno (Alumno eliminarAlumno)
+        public string EliminarEmpresaAlumno (int nMatricula)
         {
-            return nuevoAcceso.EliminarEmpresaAlumno(eliminarAlumno);
+            return nuevoAcceso.EliminarEmpresaAlumno(nMatricula);
         }
     }
 }

@@ -29,6 +29,11 @@ namespace Entidades
             FCT = fCT;
         }
 
+        public Alumno(int nMatricula)
+        {
+            NMatricula = nMatricula;
+        }
+
         public Alumno(string nombre, string nombreEmpresa)
         {
             Nombre = nombre;
